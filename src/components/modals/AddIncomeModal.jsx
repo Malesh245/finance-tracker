@@ -30,7 +30,7 @@ function AddIncomeModal({ show, onClose }) {
       amountRef.current.value = "";
       toast.success("Income added successfully !");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       toast.error("Failed to add income");
     }
   };
@@ -42,7 +42,7 @@ function AddIncomeModal({ show, onClose }) {
       await removeIncomeItem(incomeId);
       toast.success("Income item deleted successfully");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       toast.error("Failed to delete income item");
     }
   };
