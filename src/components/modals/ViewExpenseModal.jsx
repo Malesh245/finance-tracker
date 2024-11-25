@@ -24,7 +24,7 @@ function ViewExpenseModal({ show, onclose, expense }) {
       expense.items = updatedItems;
       toast.success("Delete expense item successfully !");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       toast.error("Failed to delete expense item");
     }
   };
@@ -34,7 +34,7 @@ function ViewExpenseModal({ show, onclose, expense }) {
       await deleteExpenseCategory(expense.id);
       toast.success("Delete caterory successfully !");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       toast.error("Failed to delete category");
     }
   };

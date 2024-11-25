@@ -31,13 +31,13 @@ function AddExpensesModal({ show, onClose }) {
     };
     try {
       await addExpenseItem(selectedCategory, newExpense);
-      console.log(newExpense);
+      // console.log(newExpense);
       setExpenseAmount("");
       setSelectedCategory("");
       onClose();
       toast.success("Expense added successfully !");
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       toast.error("Failed to add expense");
     }
   };
@@ -51,7 +51,7 @@ function AddExpensesModal({ show, onClose }) {
       toast.success("Category added successfully !");
       setShowAddExpense(false);
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       toast.error("Failed to add category");
     }
   };
