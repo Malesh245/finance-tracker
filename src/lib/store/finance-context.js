@@ -131,7 +131,7 @@ export default function FinanceContextProvider({ children }) {
         ];
       });
     } catch (error) {
-      console.log(error.message);
+      throw error;
     }
   };
   const removeIncomeItem = async (incomeId) => {
@@ -143,7 +143,7 @@ export default function FinanceContextProvider({ children }) {
         return prev.filter((i) => i.id !== incomeId);
       });
     } catch (error) {
-      console.log(error.message);
+      throw error;
     }
   };
 
@@ -177,10 +177,9 @@ export default function FinanceContextProvider({ children }) {
             : null,
         }));
 
-        console.log("Fetched data:", data); // Log the fetched data
         setIncome(data);
       } catch (error) {
-        console.error("Error fetching income data:", error);
+        throw error;
       }
     };
     const getExpensesData = async () => {
@@ -194,10 +193,9 @@ export default function FinanceContextProvider({ children }) {
           ...doc.data(),
         }));
 
-        console.log("Fetched data:", data); // Log the fetched data
         setExpenses(data);
       } catch (error) {
-        console.error("Error fetching income data:", error);
+        throw error;
       }
     };
 
